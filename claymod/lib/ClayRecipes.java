@@ -120,8 +120,11 @@ public class ClayRecipes {
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClaySwordArray[16], 1), new Object[] { "M", "M", "S", 'M', CA.ClayMaterialArray[16], 'S', CA.ClayStickArray[16] });
 	
        	GameRegistry.addShapedRecipe(new ItemStack(ClayMod.homemadeClayBlock, 1), new Object[] {"CC", "CC", 'C', ClayMod.homemadeClayBall});
+       	GameRegistry.addShapedRecipe(new ItemStack(ClayMod.mudBlock, 1), new Object[] {"CC", "CC", 'C', ClayMod.mudBall});
        	GameRegistry.addShapedRecipe(new ItemStack(ClayMod.mudBlock, 8), new Object[] {"DDD", "DWD", "DDD", 'D', Blocks.dirt, 'W',Items.water_bucket});
-       	GameRegistry.addShapelessRecipe(new ItemStack(ClayMod.homemadeClayBall, 4), new Object[] {ClayMod.homemadeClayBlock});
+       	GameRegistry.addShapelessRecipe(new ItemStack(ClayMod.homemadeClayBall, 4), new Object[] {ClayMod.homemadeClayBlock});     
+       	GameRegistry.addShapelessRecipe(new ItemStack(ClayMod.mudBall, 4), new Object[] {ClayMod.mudBlock});
+       	GameRegistry.addShapelessRecipe(new ItemStack(Items.clay_ball, 4), new Object[] {Blocks.clay});
        	GameRegistry.addSmelting(ClayMod.mudBall, new ItemStack(ClayMod.homemadeClayBall, 1), 0.7F);
        	GameRegistry.addSmelting(ClayMod.homemadeClayBall, new ItemStack(Items.brick, 1), 0.7F);
        	GameRegistry.addSmelting(ClayMod.homemadeClayBlock, new ItemStack(Blocks.hardened_clay, 1), 0.7F);

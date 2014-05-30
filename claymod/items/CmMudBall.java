@@ -18,7 +18,6 @@ public class CmMudBall extends Item
         this.setCreativeTab(ClayMod.claymodTab);
         this.setTextureName(ClayMod.modid + ":" + string);
         this.setUnlocalizedName(string);
-        this.setHarvestLevel("shovel", 2);
     }
 
 

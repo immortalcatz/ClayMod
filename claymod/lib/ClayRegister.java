@@ -12,7 +12,8 @@ public class ClayRegister {
         GameRegistry.registerItem(m.mudBall, "mudBall");
         GameRegistry.registerItem(m.homemadeClayBall, "homemadeClayBall");
         GameRegistry.registerBlock(m.homemadeClayBlock, "homemadeClayBlock");
-		
+        GameRegistry.registerBlock(m.mudBlock, "mudBlock");
+
         GameRegistry.registerItem(m.blackClayStick, CS.BLACKCLAYSTICK_NAME);
         GameRegistry.registerItem(m.redClayStick, CS.REDCLAYSTICK_NAME);
         GameRegistry.registerItem(m.greenClayStick, CS.GREENCLAYSTICK_NAME);

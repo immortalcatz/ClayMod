@@ -53,10 +53,10 @@ public class ClayWorldgen implements IWorldGenerator {
 	}
 
 	private void generateSurface(Random random, int i, int j, World world) {	
-		addMudGen(ClayMod.mudBlock, Blocks.dirt, Blocks.gravel, random, world, i, j, 50, 100, 1, 20, 30);
+		addMudGen(ClayMod.mudBlock, Blocks.dirt, Blocks.gravel, Blocks.grass, random, world, i, j, 10, 100, 5, 20, 30);
 
 	}
-	private void addMudGen(Block block, Block blockSpawn, Block blockSpawn1, Random random,
+	private void addMudGen(Block block, Block blockSpawn, Block blockSpawn1,Block blockSpawn2, Random random,
 			World world, int posX, int posZ, int minY, int maxY,
 			int minVeinSize, int maxVeinSize, int spawnChance) {
 		BiomeGenBase biome = world.getWorldChunkManager().getBiomeGenAt(posX ,posZ);
@@ -67,6 +67,7 @@ public class ClayWorldgen implements IWorldGenerator {
 				int yPos = minY + random.nextInt(maxY - minY);
 				int zPos = posZ + random.nextInt(defaultChunkSize);
 				
+				new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn2).generate(world, random, xPos, yPos, zPos);
 				new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn1).generate(world, random, xPos, yPos, zPos);
 				new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn).generate(world, random, xPos, yPos, zPos);
 			}
@@ -77,6 +78,7 @@ public class ClayWorldgen implements IWorldGenerator {
 					int yPos = minY + random.nextInt(maxY - minY);
 					int zPos = posZ + random.nextInt(defaultChunkSize);
 					
+					new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn2).generate(world, random, xPos, yPos, zPos);
 					new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn1).generate(world, random, xPos, yPos, zPos);
 					new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn).generate(world, random, xPos, yPos, zPos);
 				}
@@ -87,6 +89,7 @@ public class ClayWorldgen implements IWorldGenerator {
 						int yPos = minY + random.nextInt(maxY - minY);
 						int zPos = posZ + random.nextInt(defaultChunkSize);
 						
+						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn2).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn1).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn).generate(world, random, xPos, yPos, zPos);
 					}
@@ -97,6 +100,7 @@ public class ClayWorldgen implements IWorldGenerator {
 						int yPos = minY + random.nextInt(maxY - minY);
 						int zPos = posZ + random.nextInt(defaultChunkSize);
 						
+						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn2).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn1).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn).generate(world, random, xPos, yPos, zPos);
 					}
@@ -107,6 +111,7 @@ public class ClayWorldgen implements IWorldGenerator {
 						int yPos = minY + random.nextInt(maxY - minY);
 						int zPos = posZ + random.nextInt(defaultChunkSize);
 						
+						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn2).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn1).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn).generate(world, random, xPos, yPos, zPos);
 					}
@@ -117,6 +122,7 @@ public class ClayWorldgen implements IWorldGenerator {
 						int yPos = minY + random.nextInt(maxY - minY);
 						int zPos = posZ + random.nextInt(defaultChunkSize);
 						
+						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn2).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn1).generate(world, random, xPos, yPos, zPos);
 						new WorldGenMinable(block,(minVeinSize + random.nextInt(maxVeinSize - minVeinSize)), blockSpawn).generate(world, random, xPos, yPos, zPos);
 				}

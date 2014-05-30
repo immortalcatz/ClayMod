@@ -18,7 +18,6 @@ public class CmClayBall extends Item
         this.setCreativeTab(ClayMod.claymodTab);
         this.setTextureName(ClayMod.modid + ":" + string);
         this.setUnlocalizedName(string);
-        this.setHarvestLevel("shovel", 2);
     }
 
 public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
@@ -28,7 +27,7 @@ public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlaye
 
 public String func_150927_i()
 {
-    return StatCollector.translateToLocal("a§item.homemadeClayBall.desc");
+    return StatCollector.translateToLocal("item.homemadeClayBall.desc");
 }
 
 }
