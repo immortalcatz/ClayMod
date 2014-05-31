@@ -19,7 +19,7 @@ public class CmClayBlock extends Block{
 		super(mat);
 		this.setBlockName(string);
 		this.setBlockTextureName(ClayMod.modid + ":" + string);
-		this.setHarvestLevel("spade", 0);
+		this.setHarvestLevel("shovel", 0);
 		this.setHardness(0.6F);
 		this.setCreativeTab(ClayMod.claymodTab);
 		this.setStepSound(soundTypeGravel);
