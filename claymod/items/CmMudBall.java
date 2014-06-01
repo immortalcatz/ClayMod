@@ -2,6 +2,7 @@ package claymod.items;
 
 import java.util.List;
 
+import claymod.entities.EntityMudBall;
 import claymod.init.ClayTabs;
 import claymod.main.ClayMod;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,10 +20,24 @@ public class CmMudBall extends Item
         this.setCreativeTab(ClayTabs.claymodTab);
         this.setTextureName(ClayMod.modid + ":" + string);
         this.setUnlocalizedName(string);
+        this.maxStackSize = 1024;
+    }
+    
+    public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
+    {
+    if (!par3EntityPlayer.capabilities.isCreativeMode)
+    {
+        --par1ItemStack.stackSize;
     }
 
+    par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
+    if (!par2World.isRemote)
+    {
+        par2World.spawnEntityInWorld(new EntityMudBall(par2World, par3EntityPlayer));
+    }
+
+    return par1ItemStack;
+    }
 
 }
-
-

@@ -1,12 +1,15 @@
 package claymod.init;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import claymod.blocks.CmClayBlock;
 import claymod.blocks.CmMudBlock;
+import claymod.blocks.CmMudThin;
 import claymod.items.CmClayBall;
 import claymod.items.CmClayStick;
 import claymod.items.CmColorRemover;
@@ -28,6 +31,9 @@ public class ClayParts {
     //Tool Material
     public static ToolMaterial ClayMaterial = EnumHelper.addToolMaterial("CLAY", 2, 196, 5.0F, 1.5F, 10);
     
+    //Material
+    public static final Material mud = (new MaterialLogic(MapColor.clayColor)).setReplaceable().setTranslucent().setRequiresTool().setNoPushMobility();
+
     //Balls
     public static Item mudBall;
     public static Item homemadeClayBall;
@@ -36,7 +42,8 @@ public class ClayParts {
     //Blocks
     public static Block homemadeClayBlock;
     public static Block mudBlock;
-    
+    public static Block mudThin;
+
     //Sticks
     public static Item blackClayStick;
     public static Item redClayStick;
@@ -161,6 +168,7 @@ public class ClayParts {
         //Blocks
            homemadeClayBlock = new CmClayBlock(Material.clay, "homemadeClayBlock");
            mudBlock = new CmMudBlock(Material.clay, "mudBlock");
+           mudThin = new CmMudThin().setHardness(0.1F).setStepSound(Block.soundTypeGravel).setLightOpacity(0);
 
         //Sticks
            blackClayStick = new CmClayStick(CC.BLACKCLAYSTICK_COLOR).setUnlocalizedName(CS.BLACKCLAYSTICK_NAME);

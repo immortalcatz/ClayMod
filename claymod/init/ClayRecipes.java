@@ -131,7 +131,6 @@ public class ClayRecipes {
        	GameRegistry.addShapedRecipe(new ItemStack(CP.homemadeClayBlock, 1), new Object[] {"CC", "CC", 'C', CP.homemadeClayBall});
        	GameRegistry.addShapedRecipe(new ItemStack(CP.mudBlock, 1), new Object[] {"CC", "CC", 'C', CP.mudBall});
        	GameRegistry.addShapedRecipe(new ItemStack(CP.mudBlock, 8), new Object[] {"DDD", "DWD", "DDD", 'D', Blocks.dirt, 'W',Items.water_bucket});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.colorRemover, 8), new Object[] {"GRG", "RWR", "GRG", 'R', new ItemStack(Items.dye, 0, 1), 'G', new ItemStack(Items.dye, 0, 2), 'W',Items.water_bucket});
        	GameRegistry.addShapelessRecipe(new ItemStack(CP.homemadeClayBall, 4), new Object[] {CP.homemadeClayBlock});     
        	GameRegistry.addShapelessRecipe(new ItemStack(CP.mudBall, 4), new Object[] {CP.mudBlock});
        	GameRegistry.addShapelessRecipe(new ItemStack(Items.clay_ball, 4), new Object[] {Blocks.clay});
@@ -253,6 +252,9 @@ public class ClayRecipes {
 		ClayArrays CA = new ClayArrays();	
     	ClayParts CP = new ClayParts();
 		
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.colorRemover, 100), new Object[] {"DDD", "DWD", "DDD", 'D', new ItemStack(Items.dye, 0, wild), 'W',Items.water_bucket});
+
+    	//Remove Colors & Repair
        	GameRegistry.addShapelessRecipe(new ItemStack(CA.ClayPickaxeArray[16], 1), new Object[] {CP.colorRemover, new ItemStack(CA.ClayPickaxeArray[0], 1, wild)});
        	GameRegistry.addShapelessRecipe(new ItemStack(CA.ClayHoeArray[16], 1), new Object[] {CP.colorRemover, new ItemStack(CA.ClayHoeArray[0], 1, wild)});
        	GameRegistry.addShapelessRecipe(new ItemStack(CA.ClayAxeArray[16], 1), new Object[] {CP.colorRemover, new ItemStack(CA.ClayAxeArray[0], 1, wild)});

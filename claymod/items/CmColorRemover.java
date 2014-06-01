@@ -14,6 +14,7 @@ public class CmColorRemover extends Item {
         this.setCreativeTab(ClayTabs.claymodTab);
         this.setTextureName(ClayMod.modid + ":" + string);
         this.setUnlocalizedName(string);
+        this.setMaxDamage(100);
 	}
 	
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
@@ -25,4 +26,27 @@ public class CmColorRemover extends Item {
 	{
 	    return StatCollector.translateToLocal("item.colorRemover.desc");
 	}
+	
+    @Override
+    public boolean doesContainerItemLeaveCraftingGrid(ItemStack itemStack)
+    {
+        return false;
+    }
+
+    @Override
+    public boolean getShareTag()
+    {
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack itemStack)
+    {
+        ItemStack copiedStack = itemStack.copy();
+
+        copiedStack.setItemDamage(copiedStack.getItemDamage() + 1);
+        copiedStack.stackSize = 1;
+
+        return copiedStack;
+    }
 }

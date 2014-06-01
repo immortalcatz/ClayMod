@@ -5,6 +5,8 @@ import java.io.File;
 import claymod.blocks.CmClayBlock;
 import claymod.blocks.CmMudBlock;
 import claymod.config.ConfigurationHandler;
+import claymod.entities.EntityClayBall;
+import claymod.entities.EntityMudBall;
 import claymod.init.ClayArrays;
 import claymod.init.ClayRecipes;
 import claymod.init.LoadMod;
@@ -31,6 +33,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAnvil;
@@ -61,6 +64,8 @@ public class ClayMod {
         public static CommonProxy proxy;
         private EntityPlayer player;
         
+    	int clayID = 0;
+    	int mudID = 1;
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {   
         	FMLCommonHandler.instance().bus().register(new KeyHandler());
@@ -68,6 +73,8 @@ public class ClayMod {
             proxy.registerKeyBindings();
             NetworkRegistry.INSTANCE.registerGuiHandler(instance, proxy);
 
+        	EntityRegistry.registerModEntity(EntityMudBall.class, "Mud Ball", ++mudID, this, 64, 10, true);
+        	EntityRegistry.registerModEntity(EntityClayBall.class, "Clay Ball", ++clayID, this, 64, 10, true);
                LoadMod.load();
 
        		GameRegistry.registerWorldGenerator(new ClayWorldgen(), 0);

@@ -1,15 +1,60 @@
 package claymod.init;
 
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.world.biome.BiomeGenBase;
+import claymod.entities.EntityClayBall;
+import claymod.entities.EntityMudBall;
+import claymod.entities.EntityMudGolem;
 import claymod.lib.ClayStrings;
 import claymod.main.ClayMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.registry.LanguageRegistry;
 
 class ClayRegister {
-	
+
 	protected static void init(){
 		addClayStuff();
 		addTools();
+		addMobs();
+		addGolemSpawn();
 	}
+	
+	private static void addMobs(){
+		addMob(EntityMudGolem.class, "MudGolem", EnumCreatureType.creature, 0x835C3B, 0xC85A17);
+	}
+	
+	private static void addGolemSpawn(){
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.mesaPlateau);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.plains);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.taiga);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.mesa);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.mesaPlateau_F);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.desertHills);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.extremeHills);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.extremeHillsEdge);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.extremeHillsPlus);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.birchForest);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.birchForestHills);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.beach);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.forest);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.forestHills);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.jungle);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.jungleEdge);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.jungleHills);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.roofedForest);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.savanna);
+		EntityRegistry.addSpawn(EntityMudGolem.class, 60, 3, 6, EnumCreatureType.creature, BiomeGenBase.savannaPlateau);
+	}
+	private static void addMob(Class entityClass, String name, EnumCreatureType typeMob, int primColor, int secColor){
+		int entityID = EntityRegistry.findGlobalUniqueEntityId();
+		EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
+		EntityRegistry.registerModEntity(entityClass, name, entityID, ClayMod.instance, 64, 1, true);
+        EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primColor, secColor));
+	}
+	
 	private static void addClayStuff(){
     	ClayParts CP = new ClayParts();
 		ClayStrings CS= new ClayStrings();
@@ -19,6 +64,7 @@ class ClayRegister {
         GameRegistry.registerItem(CP.colorRemover, "colorRemover");
         GameRegistry.registerBlock(CP.homemadeClayBlock, "homemadeClayBlock");
         GameRegistry.registerBlock(CP.mudBlock, "mudBlock");
+        GameRegistry.registerBlock(CP.mudThin, "mudThin");
 
         GameRegistry.registerItem(CP.blackClayStick, CS.BLACKCLAYSTICK_NAME);
         GameRegistry.registerItem(CP.redClayStick, CS.REDCLAYSTICK_NAME);
