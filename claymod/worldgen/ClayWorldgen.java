@@ -2,6 +2,7 @@ package claymod.worldgen;
 
 import java.util.Random;
 
+import claymod.init.ClayParts;
 import claymod.main.ClayMod;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
@@ -53,7 +54,7 @@ public class ClayWorldgen implements IWorldGenerator {
 	}
 
 	private void generateSurface(Random random, int i, int j, World world) {	
-		addMudGen(ClayMod.mudBlock, Blocks.dirt, Blocks.gravel, Blocks.grass, random, world, i, j, 10, 100, 5, 20, 30);
+		addMudGen(ClayParts.mudBlock, Blocks.dirt, Blocks.gravel, Blocks.grass, random, world, i, j, 10, 100, 5, 20, 30);
 
 	}
 	private void addMudGen(Block block, Block blockSpawn, Block blockSpawn1,Block blockSpawn2, Random random,

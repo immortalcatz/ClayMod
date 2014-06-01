@@ -1,10 +1,12 @@
 package claymod.tools;
 
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import claymod.init.ClayParts;
+import claymod.init.ClayTabs;
 import claymod.main.ClayMod;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 
 public class CmClaySword extends ItemSword{
 
@@ -13,7 +15,7 @@ public class CmClaySword extends ItemSword{
 	public CmClaySword(ToolMaterial toolmat, int colorcode) {
 		super(toolmat);
 		this.color = colorcode;
-        this.setCreativeTab(ClayMod.claymodTab);
+        this.setCreativeTab(ClayTabs.claymodTab);
         this.setTextureName(ClayMod.modid + ":" + "swordClay");
 	}
 
@@ -24,4 +26,8 @@ public class CmClaySword extends ItemSword{
     	return color;
     }
     
+    public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+    {
+        return ClayParts.colorRemover == par2ItemStack.getItem() ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+    }
 }

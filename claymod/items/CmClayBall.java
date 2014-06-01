@@ -2,20 +2,19 @@ package claymod.items;
 
 import java.util.List;
 
-import claymod.main.ClayMod;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
-import net.minecraft.world.World;
+import claymod.init.ClayTabs;
+import claymod.main.ClayMod;
 
 public class CmClayBall extends Item
 {
 
     public CmClayBall(String string)
     {
-        this.setCreativeTab(ClayMod.claymodTab);
+        this.setCreativeTab(ClayTabs.claymodTab);
         this.setTextureName(ClayMod.modid + ":" + string);
         this.setUnlocalizedName(string);
     }

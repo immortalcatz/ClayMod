@@ -5,6 +5,8 @@ import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import claymod.init.ClayParts;
+import claymod.init.ClayTabs;
 import claymod.main.ClayMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -21,7 +23,7 @@ public class CmMudBlock extends Block{
 		this.setBlockTextureName(ClayMod.modid + ":" + string);
 		this.setHarvestLevel("shovel", 0);
 		this.setHardness(0.6F);
-		this.setCreativeTab(ClayMod.claymodTab);
+		this.setCreativeTab(ClayTabs.claymodTab);
 		this.setStepSound(soundTypeGravel);
 		
 	}
@@ -33,7 +35,7 @@ public class CmMudBlock extends Block{
 	
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return ClayMod.mudBall;
+        return ClayParts.mudBall;
     }
 
 }

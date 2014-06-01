@@ -1,5 +1,7 @@
 itemGroup.claymodTab=The Clay Mod
 item.mudBall.name=Mud Ball
+item.colorRemover.name=§2C§3o§4l§5o§6r §aR§ee§9m§eo§bv§ce§dr
+item.colorRemover.desc=§bUsed for repairing clay tools and removing colors.
 item.homemadeClayBall.name=Clay Ball
 item.homemadeClayBall.desc=Clay made from mud.
 tile.homemadeClayBlock.name=Clay Block
