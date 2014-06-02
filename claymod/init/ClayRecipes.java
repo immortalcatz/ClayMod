@@ -253,7 +253,7 @@ public class ClayRecipes {
     	ClayParts CP = new ClayParts();
 		
        	GameRegistry.addShapedRecipe(new ItemStack(CP.colorRemover, 1), new Object[] {"DDD", "DWD", "DDD", 'D', new ItemStack(Items.dye, 0, wild), 'W',Items.water_bucket});
-
+       
     	//Remove Colors & Repair
        	GameRegistry.addShapelessRecipe(new ItemStack(CA.ClayPickaxeArray[16], 1), new Object[] {new ItemStack(CP.colorRemover,  1, wild), new ItemStack(CA.ClayPickaxeArray[0], 1, wild)});
        	GameRegistry.addShapelessRecipe(new ItemStack(CA.ClayHoeArray[16], 1), new Object[] {new ItemStack(CP.colorRemover,  1, wild), new ItemStack(CA.ClayHoeArray[0], 1, wild)});

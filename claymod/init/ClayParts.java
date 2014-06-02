@@ -32,7 +32,7 @@ public class ClayParts {
     public static ToolMaterial ClayMaterial = EnumHelper.addToolMaterial("CLAY", 2, 196, 5.0F, 1.5F, 10);
     
     //Material
-    public static final Material mud = (new MaterialLogic(MapColor.clayColor)).setReplaceable().setTranslucent().setRequiresTool().setNoPushMobility();
+   // public static final Material mud = (new MaterialLogic(MapColor.clayColor)).setReplaceable().setTranslucent().setRequiresTool().setNoPushMobility();
 
     //Balls
     public static Item mudBall;
