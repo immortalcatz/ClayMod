@@ -19,7 +19,7 @@ public class ClayRecipes {
 	private static void addClayRecipes(){
     	ClayParts CP = new ClayParts();
 		ClayArrays CA = new ClayArrays();	
-
+		
 		GameRegistry.addShapedRecipe(new ItemStack(CA.ClayStickArray[0], 4), new Object[] { "M", "M", 'M', CA.ClayMaterialArray[0]});
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClayStickArray[1], 4), new Object[] { "M", "M", 'M', CA.ClayMaterialArray[1]});
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClayStickArray[2], 4), new Object[] { "M", "M", 'M', CA.ClayMaterialArray[2]});
@@ -127,6 +127,15 @@ public class ClayRecipes {
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClaySwordArray[14], 1), new Object[] { "M", "M", "S", 'M', CA.ClayMaterialArray[14], 'S', CA.ClayStickArray[14] });
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClaySwordArray[15], 1), new Object[] { "M", "M", "S", 'M', CA.ClayMaterialArray[15], 'S', CA.ClayStickArray[15] });
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClaySwordArray[16], 1), new Object[] { "M", "M", "S", 'M', CA.ClayMaterialArray[16], 'S', CA.ClayStickArray[16] });
+       	
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.stoneChisel, 1), new Object[] {" C", "S ", 'C', Blocks.cobblestone, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.stoneChisel, 1), new Object[] {"C ", " S", 'C', Blocks.cobblestone, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.ironChisel, 1), new Object[] {" C", "S ", 'C', Items.iron_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.ironChisel, 1), new Object[] {"C ", " S", 'C', Items.iron_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.goldChisel, 1), new Object[] {" C", "S ", 'C', Items.gold_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.goldChisel, 1), new Object[] {"C ", " S", 'C', Items.gold_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.diamondChisel, 1), new Object[] {" C", "S ", 'C', Items.diamond, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.diamondChisel, 1), new Object[] {"C ", " S", 'C', Items.diamond, 'S', Items.stick});
        	
        	GameRegistry.addShapedRecipe(new ItemStack(CP.homemadeClayBlock, 1), new Object[] {"CC", "CC", 'C', CP.homemadeClayBall});
        	GameRegistry.addShapedRecipe(new ItemStack(CP.mudBlock, 1), new Object[] {"CC", "CC", 'C', CP.mudBall});

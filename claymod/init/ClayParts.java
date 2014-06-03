@@ -7,9 +7,12 @@ import net.minecraft.block.material.MaterialLogic;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import claymod.blocks.CmCarvedClay;
 import claymod.blocks.CmClayBlock;
+import claymod.blocks.CmHardCarvedClay;
 import claymod.blocks.CmMudBlock;
 import claymod.blocks.CmMudThin;
+import claymod.items.CmChisel;
 import claymod.items.CmClayBall;
 import claymod.items.CmClayStick;
 import claymod.items.CmColorRemover;
@@ -30,19 +33,22 @@ public class ClayParts {
   	
     //Tool Material
     public static ToolMaterial ClayMaterial = EnumHelper.addToolMaterial("CLAY", 2, 196, 5.0F, 1.5F, 10);
-    
-    //Material
-   // public static final Material mud = (new MaterialLogic(MapColor.clayColor)).setReplaceable().setTranslucent().setRequiresTool().setNoPushMobility();
-
-    //Balls
-    public static Item mudBall;
-    public static Item homemadeClayBall;
-    public static Item colorRemover;
 
     //Blocks
     public static Block homemadeClayBlock;
     public static Block mudBlock;
     public static Block mudThin;
+    public static Block carvedClayHard;
+    public static Block carvedClay;
+
+    //Items
+    public static Item mudBall;
+    public static Item homemadeClayBall;
+    public static Item colorRemover;
+    public static Item stoneChisel;
+    public static Item ironChisel;
+    public static Item goldChisel;
+    public static Item diamondChisel;
 
     //Sticks
     public static Item blackClayStick;
@@ -159,17 +165,22 @@ public class ClayParts {
     }
 	private static void addClayStuff(){
         
-		
-        //Balls
-           mudBall = new CmMudBall("mudBall");
-           homemadeClayBall = new CmClayBall("homemadeClayBall");
-           colorRemover = new CmColorRemover("colorRemover");
-           
         //Blocks
            homemadeClayBlock = new CmClayBlock(Material.clay, "homemadeClayBlock");
            mudBlock = new CmMudBlock(Material.clay, "mudBlock");
            mudThin = new CmMudThin().setHardness(0.1F).setStepSound(Block.soundTypeGravel).setLightOpacity(0);
-
+           carvedClayHard = new CmHardCarvedClay();
+           carvedClay = new CmCarvedClay();
+           
+        //Items
+           mudBall = new CmMudBall("mudBall");
+           homemadeClayBall = new CmClayBall("homemadeClayBall");
+           colorRemover = new CmColorRemover("colorRemover");
+           stoneChisel = new CmChisel("stoneChisel", 64);
+           ironChisel = new CmChisel("ironChisel", 127);
+           goldChisel = new CmChisel("goldChisel", 243);
+           diamondChisel = new CmChisel("diamondChisel", 436);
+           
         //Sticks
            blackClayStick = new CmClayStick(CC.BLACKCLAYSTICK_COLOR).setUnlocalizedName(CS.BLACKCLAYSTICK_NAME);
            redClayStick = new CmClayStick(CC.REDCLAYSTICK_COLOR).setUnlocalizedName(CS.REDCLAYSTICK_NAME);

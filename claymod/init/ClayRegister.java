@@ -6,6 +6,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import claymod.entities.EntityClayBall;
 import claymod.entities.EntityMudBall;
 import claymod.entities.EntityMudGolem;
+import claymod.itemblocks.ItemBlockCarvedClay;
 import claymod.lib.ClayStrings;
 import claymod.main.ClayMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -19,10 +20,15 @@ class ClayRegister {
 		addTools();
 		addMobs();
 		addGolemSpawn();
+		addMetadataBlocks();
 	}
 	
 	private static void addMobs(){
 		addMob(EntityMudGolem.class, "MudGolem", EnumCreatureType.creature, 0x835C3B, 0xC85A17);
+	}
+	
+	private static void addMetadataBlocks(){
+		GameRegistry.registerBlock(ClayParts.carvedClay, ItemBlockCarvedClay.class, "carvedClay");
 	}
 	
 	private static void addGolemSpawn(){
@@ -62,6 +68,12 @@ class ClayRegister {
         GameRegistry.registerItem(CP.mudBall, "mudBall");
         GameRegistry.registerItem(CP.homemadeClayBall, "homemadeClayBall");
         GameRegistry.registerItem(CP.colorRemover, "colorRemover");
+        GameRegistry.registerItem(CP.stoneChisel, "stoneChisel");
+        GameRegistry.registerItem(CP.ironChisel, "ironChisel");
+        GameRegistry.registerItem(CP.goldChisel, "goldChisel");
+        GameRegistry.registerItem(CP.diamondChisel, "diamondChisel");
+
+        GameRegistry.registerBlock(CP.carvedClayHard, "carvedClayHard");
         GameRegistry.registerBlock(CP.homemadeClayBlock, "homemadeClayBlock");
         GameRegistry.registerBlock(CP.mudBlock, "mudBlock");
         GameRegistry.registerBlock(CP.mudThin, "mudThin");
