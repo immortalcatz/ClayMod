@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package claymod.init;
 
 import claymod.main.ClayMod;
@@ -14,6 +17,7 @@ public class ClayRecipes {
    		addClayRecipes();
    		addAlternateClayRecipes();
    		addColorRemoverRecipes();
+   		addChiselRecipes();
    	}
    	
 	private static void addClayRecipes(){
@@ -127,15 +131,6 @@ public class ClayRecipes {
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClaySwordArray[14], 1), new Object[] { "M", "M", "S", 'M', CA.ClayMaterialArray[14], 'S', CA.ClayStickArray[14] });
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClaySwordArray[15], 1), new Object[] { "M", "M", "S", 'M', CA.ClayMaterialArray[15], 'S', CA.ClayStickArray[15] });
        	GameRegistry.addShapedRecipe(new ItemStack(CA.ClaySwordArray[16], 1), new Object[] { "M", "M", "S", 'M', CA.ClayMaterialArray[16], 'S', CA.ClayStickArray[16] });
-       	
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.stoneChisel, 1), new Object[] {" C", "S ", 'C', Blocks.cobblestone, 'S', Items.stick});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.stoneChisel, 1), new Object[] {"C ", " S", 'C', Blocks.cobblestone, 'S', Items.stick});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.ironChisel, 1), new Object[] {" C", "S ", 'C', Items.iron_ingot, 'S', Items.stick});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.ironChisel, 1), new Object[] {"C ", " S", 'C', Items.iron_ingot, 'S', Items.stick});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.goldChisel, 1), new Object[] {" C", "S ", 'C', Items.gold_ingot, 'S', Items.stick});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.goldChisel, 1), new Object[] {"C ", " S", 'C', Items.gold_ingot, 'S', Items.stick});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.diamondChisel, 1), new Object[] {" C", "S ", 'C', Items.diamond, 'S', Items.stick});
-       	GameRegistry.addShapedRecipe(new ItemStack(CP.diamondChisel, 1), new Object[] {"C ", " S", 'C', Items.diamond, 'S', Items.stick});
        	
        	GameRegistry.addShapedRecipe(new ItemStack(CP.homemadeClayBlock, 1), new Object[] {"CC", "CC", 'C', CP.homemadeClayBall});
        	GameRegistry.addShapedRecipe(new ItemStack(CP.mudBlock, 1), new Object[] {"CC", "CC", 'C', CP.mudBall});
@@ -257,6 +252,92 @@ public class ClayRecipes {
    	
 	}
 	
+	private static void addChiselRecipes(){
+    	ClayParts CP = new ClayParts();
+		ClayArrays CA = new ClayArrays();	
+		
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.stoneChisel, 1), new Object[] {" C", "S ", 'C', Blocks.cobblestone, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.stoneChisel, 1), new Object[] {"C ", " S", 'C', Blocks.cobblestone, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.ironChisel, 1), new Object[] {" C", "S ", 'C', Items.iron_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.ironChisel, 1), new Object[] {"C ", " S", 'C', Items.iron_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.goldChisel, 1), new Object[] {" C", "S ", 'C', Items.gold_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.goldChisel, 1), new Object[] {"C ", " S", 'C', Items.gold_ingot, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.diamondChisel, 1), new Object[] {" C", "S ", 'C', Items.diamond, 'S', Items.stick});
+       	GameRegistry.addShapedRecipe(new ItemStack(CP.diamondChisel, 1), new Object[] {"C ", " S", 'C', Items.diamond, 'S', Items.stick});
+       	
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 0), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 0)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 1), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 1)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 2), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 2)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 3), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 3)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 4), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 4)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 5), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 5)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 6), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 6)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 7), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 7)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 8), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 8)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 9), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 9)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 10), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 10)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 11), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 11)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 12), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 12)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 13), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 13)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 14), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 14)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 15), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 15)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClayHard), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.stoneChisel, 1, wild), 'S', new ItemStack(Blocks.hardened_clay)});
+
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 0), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 0)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 1), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 1)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 2), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 2)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 3), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 3)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 4), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 4)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 5), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 5)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 6), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 6)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 7), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 7)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 8), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 8)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 9), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 9)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 10), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 10)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 11), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 11)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 12), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 12)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 13), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 13)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 14), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 14)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 15), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 15)});		
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClayHard), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.ironChisel, 1, wild), 'S', new ItemStack(Blocks.hardened_clay)});
+
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 0), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 0)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 1), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 1)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 2), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 2)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 3), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 3)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 4), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 4)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 5), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 5)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 6), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 6)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 7), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 7)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 8), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 8)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 9), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 9)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 10), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 10)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 11), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 11)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 12), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 12)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 13), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 13)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 14), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 14)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 15), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 15)});		
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClayHard), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.goldChisel, 1, wild), 'S', new ItemStack(Blocks.hardened_clay)});
+
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 0), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 0)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 1), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 1)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 2), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 2)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 3), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 3)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 4), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 4)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 5), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 5)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 6), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 6)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 7), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 7)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 8), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 8)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 9), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 9)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 10), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 10)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 11), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 11)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 12), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 12)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 13), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 13)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 14), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 14)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClay, 1, 15), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.stained_hardened_clay, 1, 15)});
+		GameRegistry.addShapedRecipe(new ItemStack(ClayParts.carvedClayHard), new Object[]{"S", "C", 'C', new ItemStack(ClayParts.diamondChisel, 1, wild), 'S', new ItemStack(Blocks.hardened_clay)});
+
+	}
 	private static void addColorRemoverRecipes(){
 		ClayArrays CA = new ClayArrays();	
     	ClayParts CP = new ClayParts();
