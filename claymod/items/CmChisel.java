@@ -24,12 +24,19 @@ public class CmChisel extends Item {
 	
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
 	{
-	    par3List.add(this.func_150927_i());
+	    par3List.add(this.mainDesc());
+	    par3List.add(this.usesDesc() + " " + this.getMaxDamage());
+
 	}
 
-	public String func_150927_i()
+	public String mainDesc()
 	{
-	    return StatCollector.translateToLocal("item." + name + ".desc");
+	    return StatCollector.translateToLocal("item." + name + ".maindesc");
+	}
+	
+	public String usesDesc()
+	{
+	    return StatCollector.translateToLocal("item." + name + ".usesdesc");
 	}
 	@Override
     public boolean hasContainerItem(ItemStack stack)

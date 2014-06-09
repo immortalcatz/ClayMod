@@ -26,7 +26,7 @@ public class CmHardCarvedClay extends Block
         this.setHardness(1.25F);
         this.setResistance(7.0F);
         this.setStepSound(soundTypePiston);
-        this.setBlockTextureName(ClayMod.modid + ":" + "/carved/" + "carvedClayHard");
+        this.setBlockTextureName(ClayMod.modid + ":" + "carvedClayHard");
         this.setBlockName("carvedClayHard");
     }
 

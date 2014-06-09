@@ -25,7 +25,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ClayMod {
 
 	//Change version on update!
-	public static final String version = "1.1";
+	public static final String version = "1.2";
 	public static final String modid = "claymod";
 	public static final String name = "The Clay Mod";
 	public static final String author = "KeeperofMee";

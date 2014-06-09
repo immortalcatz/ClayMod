@@ -42,7 +42,7 @@ public class CmCarvedClay extends Block
     public void registerBlockIcons(IIconRegister iconRegister){
     texture = new IIcon[SUBNAMES.length];
     for(int i = 0; i < SUBNAMES.length; i++)
-    texture[i] = iconRegister.registerIcon(ClayMod.modid + ":" + "/carved/" + "carvedClay" + SUBNAMES[i]);
+    texture[i] = iconRegister.registerIcon(ClayMod.modid + ":" + "carvedClay" + SUBNAMES[i]);
     }
 
     @Override

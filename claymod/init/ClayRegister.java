@@ -7,6 +7,7 @@ import claymod.entities.EntityClayBall;
 import claymod.entities.EntityMudBall;
 import claymod.entities.EntityMudGolem;
 import claymod.itemblocks.ItemBlockCarvedClay;
+import claymod.itemblocks.ItemBlockHomemadeClay;
 import claymod.lib.ClayStrings;
 import claymod.main.ClayMod;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -74,7 +75,7 @@ class ClayRegister {
         GameRegistry.registerItem(CP.diamondChisel, "diamondChisel");
 
         GameRegistry.registerBlock(CP.carvedClayHard, "carvedClayHard");
-        GameRegistry.registerBlock(CP.homemadeClayBlock, "homemadeClayBlock");
+        GameRegistry.registerBlock(CP.homemadeClayBlock, ItemBlockHomemadeClay.class, "homemadeClayBlock");
         GameRegistry.registerBlock(CP.mudBlock, "mudBlock");
         GameRegistry.registerBlock(CP.mudThin, "mudThin");
 
