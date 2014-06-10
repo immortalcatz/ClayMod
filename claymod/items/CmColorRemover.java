@@ -22,10 +22,10 @@ public class CmColorRemover extends Item {
         this.maxStackSize = 1;
 	}
 	
-	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
+	public void addInformation(ItemStack stack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)
 	{
 	    par3List.add(this.mainDesc());
-	    par3List.add(this.usesDesc() + " " + this.getMaxDamage());
+	    par3List.add(this.usesDesc() + " " + (stack.getMaxDamage()-stack.getItemDamage()));
 	}
 
 	public String mainDesc()
