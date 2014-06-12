@@ -21,6 +21,7 @@ public class CmChisel extends Item {
         this.setUnlocalizedName(string);
         this.setMaxDamage(maxDamage);
         this.maxStackSize = 1;
+        this.setNoRepair();
 	}
 	
 	public void addInformation(ItemStack stack, EntityPlayer par2EntityPlayer, List par3List, boolean par4)

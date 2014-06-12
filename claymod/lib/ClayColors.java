@@ -1,7 +1,7 @@
 package claymod.lib;
 
 import net.minecraft.item.Item;
-import claymod.tools.CmClayPickaxe;
+import claymod.items.tools.CmClayPickaxe;
 
 public class ClayColors {
 	

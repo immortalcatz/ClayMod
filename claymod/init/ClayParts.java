@@ -17,13 +17,13 @@ import claymod.items.CmClayBall;
 import claymod.items.CmClayStick;
 import claymod.items.CmColorRemover;
 import claymod.items.CmMudBall;
+import claymod.items.tools.CmClayAxe;
+import claymod.items.tools.CmClayHoe;
+import claymod.items.tools.CmClayPickaxe;
+import claymod.items.tools.CmClayShovel;
+import claymod.items.tools.CmClaySword;
 import claymod.lib.ClayColors;
 import claymod.lib.ClayStrings;
-import claymod.tools.CmClayAxe;
-import claymod.tools.CmClayHoe;
-import claymod.tools.CmClayPickaxe;
-import claymod.tools.CmClayShovel;
-import claymod.tools.CmClaySword;
 
 public class ClayParts {
 
